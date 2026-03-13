@@ -1,0 +1,13 @@
+.payment-methods {
+    background-color: #6c757d;
+    display: inline-block;
+    color: white;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.is-invalid {
+    border-color: #dc3545 !important;
+}
