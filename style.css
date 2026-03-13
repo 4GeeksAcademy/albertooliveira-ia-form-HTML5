@@ -1,11 +1,23 @@
-.payment-methods {
-    background-color: #6c757d;
-    display: inline-block;
-    color: white;
+.payment-methods-container {
+    background-color: #5a6268;
+    padding: 10px 15px !important;
+    gap: 10px;
 }
 
 .form-label {
-    font-weight: 500;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+@media (max-width: 576px) {
+    .card-header h2 {
+        font-size: 1.2rem;
+    }
+    .payment-methods-container {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
 }
 
 .is-invalid {

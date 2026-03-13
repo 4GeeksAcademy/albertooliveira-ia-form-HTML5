@@ -1,14 +1,14 @@
 document.getElementById('payment-form').addEventListener('submit', function(event) {
     event.preventDefault(); 
 
-    let form = event.target;
-    let alertError = document.getElementById('alert-error');
+    const form = event.target;
+    const alertError = document.getElementById('alert-error');
     let isValid = true;
 
-    let inputs = form.querySelectorAll('input[required], select[required]');
+    const inputs = form.querySelectorAll('input[required], select[required]');
 
     inputs.forEach(input => {
-        if (!input.value || input.value.trim() === "") {
+        if (!input.value.trim()) {
             input.classList.add('is-invalid');
             isValid = false;
         } else {
@@ -18,10 +18,10 @@ document.getElementById('payment-form').addEventListener('submit', function(even
 
     if (!isValid) {
         alertError.classList.remove('d-none');
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
         alertError.classList.add('d-none');
-        alert("¡Formulario enviado con éxito!");
+        alert("¡Formulario enviado correctamente!");
         form.reset();
     }
 });
